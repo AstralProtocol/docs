@@ -7,8 +7,16 @@ const sidebars = {
     },
     {
       type:'category',
-      label: 'Tools',
-      items: ['tools/introduction']
+      label: 'API',
+      items: [
+        'api/getting-started',
+        'api/authentication',
+        'api/data-model',
+        'api/graphql-api',
+        'api/ogc-api',
+        'api/api-reference',
+        'api/troubleshooting'
+      ]
     },
     // {
     //   type: 'category',
