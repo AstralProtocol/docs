@@ -28,21 +28,21 @@ The **Location Format Identifier** is a string that uniquely defines how the loc
 
 The general structure is:
 
-`<format>-<type>[-<additional_details>]`
+`<format>-<type>[+<additional-details>]`
 
 Where:
 - **`format`:** Specifies the underlying data format or family (e.g., `coordinate`, `geojson`, `wkt`, `geohash`, `raster`).
 - **type:** Indicates the feature type or data subtype (e.g., `decimal`, `point`, `polygon`, `geotiff`). Note that this is recommended, but not required, and for some format types, not relevant.
-- **additional-details (optional):** Provides extra context, such as ordering or specific variants (e.g., `lon_lat` (preferred) vs `lat_lon`). This component is only included when relevant.
+- **additional-details (optional):** Provides extra context, such as ordering or specific variants (e.g., `lon-lat` (preferred) vs `lat-lon`). This component is only included when relevant.
 
 ### Location Format Identifiers
 
 | Format                         | Format ID  | Type                                                        | Identifier                     | v0.1 Support | Additional Details                                                                 |
 |--------------------------------|-----------|-------------------------------------------------------------|--------------------------------|--------------|-----------------------------------------------------------------------------------|
-| Decimal Degrees (Vector)       | `coordinate` | `decimal`                                                     | `lon_lat`, `lat_lon`           | Yes          | Decimal coordinates with values ordered as longitude then latitude.              |
+| Decimal Degrees (Vector)       | `coordinate` | `decimal`                                                     | `lon-lat`, `lat-lon`           | Yes          | Decimal coordinates with values ordered as longitude then latitude.              |
 | GeoJSON (Vector)               | `geojson`    | `point`, `linestring`, `polygon`, etc.                      |                                | Yes          | Standard GeoJSON object; type determined by the geometry property.               |
 | WKT (Vector)                   | `wkt`       | `point`, `linestring`, `polygon`, `multipoint`, `multilinestring`, `multipolygon`, `featurecollection` |                                | Yes          | Well-Known Text string representing various vector geometries.                   |
-| Degrees Minutes Seconds (Vector) | `coordinate` | `dms`                                                         | `lon_lat`, `lat_lon`           | Future       | Coordinates in degrees, minutes, seconds; ordered as latitude then longitude.    |
+| Degrees Minutes Seconds (Vector) | `coordinate` | `dms`                                                         | `lon-lat`, `lat-lon`           | Future       | Coordinates in degrees, minutes, seconds; ordered as latitude then longitude.    |
 | H3 (Vector)                    | `h3`        | (Implicit cell region)                                      |                                | Future       | H3 index used for spatial indexing.                                              |
 | Geohash (Vector)               | `geohash`   | (Implicit cell region)                                      |                                | Future       | Geohash string representing a spatial grid cell; useful for spatial queries.     |
 | W3W (Vector)                   | `w3w`       | (Implicit cell region)                                      |                                | Future (Likely) | Three-word addressing system for pinpointing locations.                      |
@@ -56,7 +56,7 @@ Where:
 
 ### Vector Data
 For vector data, the SDK converts all inputs into GeoJSON internally. This conversion facilitates standard operations like mapping, spatial analysis, and integration with web applications. Examples of vector formats include:
-- `coordinate-decimal-lon_lat`
+- `coordinate-decimal+lon-lat`
 - `geojson-point`
 - `wkt-polygon`
 
@@ -71,7 +71,7 @@ For v0.1, the SDK will attempt to detect a polygon, bounding box, or centroid (i
 ## Extensibility and Future-Proofing
 
 The beauty of this extensions library is its inherent flexibility:
-- **Emerging Formats:** As new data types emerge—whether new vector standards or advanced raster formats—you can simply define new identifiers (e.g., `raster-geotiff_multiband`).
+- **Emerging Formats:** As new data types emerge—whether new vector standards or advanced raster formats—you can simply define new identifiers (e.g., `raster-geotiff+multiband`).
 - **Custom Extensions:** If specialized use cases arise, new extensions can be built without impacting the core functionality. This modular approach allows the protocol to evolve organically.
 - **Simplicity First:** We're not trying to boil the ocean from the start. The goal is to cover the most common formats now, and then expand as needed.
 
