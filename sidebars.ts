@@ -38,7 +38,8 @@ const sidebars = {
         'location-proof-protocol/eas-schema',
         'location-proof-protocol/location-types',
         'location-proof-protocol/strategies-recipes',
-        'location-proof-protocol/media-types',
+        'location-proof-protocol/media-attachments',
+        'location-proof-protocol/media-extensions',
       ],
     },
     {

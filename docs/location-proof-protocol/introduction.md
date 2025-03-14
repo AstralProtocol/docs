@@ -25,7 +25,7 @@ This section of the monorepo currently contains:
 - Details on how to create location proofs using different [location types](./location-types.md)
 - A framework (in development) for building ["recipes"](./strategies-recipes.md) that allow for many different strategies for proving
   location to be added (WIP)
-- Information on attaching differet types of [media](./media-types.md) to location proofs (WIP)
+- Information on attaching differet types of [media](./media-extensions.md) to location proofs (WIP)
 
 ## Contributing
 
