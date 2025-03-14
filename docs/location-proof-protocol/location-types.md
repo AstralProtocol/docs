@@ -75,6 +75,8 @@ The beauty of this extensions library is its inherent flexibility:
 - **Custom Extensions:** If specialized use cases arise, new extensions can be built without impacting the core functionality. This modular approach allows the protocol to evolve organically.
 - **Simplicity First:** We're not trying to boil the ocean from the start. The goal is to cover the most common formats now, and then expand as needed.
 
+Note that for v0.1, the only spatial reference system (`srs`) supported is WGS84, or EPSG:4326. We prefer using the `EPSG:<SRID>` notation in the `srs` attribute, though this is subject to change in future versions.
+
 ### Additional Considerations
 
 The Location Proof Protocol is intended to be as interoperable with the rest of the geospatial web as possible. One way to think about location proofs is as a wrapper around a geospatial data artifact that includes digital signatures and evidence about its truthfulness or authenticity. 
