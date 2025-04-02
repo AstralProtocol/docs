@@ -6,6 +6,13 @@ const sidebars = {
       label: 'Astral',
     },
     {
+      type: 'category',
+      label: 'SDK',
+      items: [
+        'sdk/introduction',
+      ]
+    },
+    {
       type:'category',
       label: 'API',
       items: [
@@ -30,62 +37,46 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'Location Proof Protocol',
+      label: 'Location Protocol',
       items: [
-        'location-proof-protocol/introduction',
-        'location-proof-protocol/quickstart',
-        'location-proof-protocol/rationale',
-        'location-proof-protocol/eas-schema',
-        'location-proof-protocol/location-types',
-        'location-proof-protocol/strategies-recipes',
-        'location-proof-protocol/media-attachments',
-        'location-proof-protocol/media-extensions',
+        'location-protocol/introduction',
+        'location-protocol/quickstart',
+        'location-protocol/rationale',
+        'location-protocol/eas-schema',
+        'location-protocol/location-types',
+        'location-protocol/strategies-recipes',
+        'location-protocol/media-attachments',
+        'location-protocol/media-extensions',
       ],
     },
     {
       type: 'category',
-      label: 'Verifiable Geocomputation',
+      label: 'Spatial.sol',
       items: [
-        'verifiable-geocomputation/introduction',
+        'spatial-sol/introduction',
+        'spatial-sol/research-plan',
       ],
     },
     {
       type: 'category',
-      label: 'Logbook',
+      label: 'Astralscan',
       items: [
-        'logbook/introduction',
-        'logbook/registering-entries',
-        'logbook/viewing-entries',
-        'logbook/multi-entry-views',
-        'logbook/frames',
-        'logbook/developers',
-        'logbook/contributing',
+        'astralscan/introduction',
+        'astralscan/registering-entries',
+        'astralscan/viewing-entries',
+        'astralscan/multi-entry-views',
+        'astralscan/frames',
+        'astralscan/developers',
+        'astralscan/contributing',
       ],
     },
     {
       type: 'category',
-      label: 'Decentralized Geospatial Data',
+      label: 'Research',
       items: [
-        'decentralized-spatial-data/introduction',
+        'research/introduction',
       ],
     },
-    // {
-    //   type: 'category',
-    //   label: 'Spatial Registries',
-    //   items: [
-    //     'spatial-registries/spatial-sol',
-    //     'spatial-registries/logbook',
-    //   ],
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Developer Resources',
-    //   items: [
-    //     'developer-resources/quickstart',
-    //     'developer-resources/spatial-registries',
-    //     'developer-resources/location-attestations',
-    //   ],
-    // },
   ],
 };
 
