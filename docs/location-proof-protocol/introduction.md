@@ -1,31 +1,30 @@
 # Introduction
 
-The Location Proof Protocol aims to address the challenge of proving location on the decentralized web in a flexible, yet standardized way.
 
-Given the diverse requirements and approaches for location proofs, our goal is to support innovation across a wide range of proof strategies
-while providing a standard data model for creating and verifying these proofs.
+Astral's Location Protocol provides a standardized structure for representing spatial information on the decentralized web. It includes:
 
-:::tip
 
-We're working on the Location Proof Protocol in a few places:
 
-- most active work is happening in the Astral Logbook dapp (especially the
-  [&lt;CheckinForm&gt; component](https://github.com/AstralProtocol/logbook/blob/83807d8e79fdac8c990dcb168d72b4bfd9a9607c/packages/nextjs/components/CheckinForm.tsx#L57))
-- we're planning to store code in the astralprotocol monorepo, located
-  [here on Github](https://github.com/AstralProtocol/astralprotocol/tree/main/src/contracts).
+- **Location attestations**: Users create structured, signed records containing location data, metadata, and attachments - basic building blocks of the decentralized geospatial web
+- **Flexible data control**: Users choose how to manage their location records - keeping them private, using centralized storage, publishing to IPFS or registering on blockchain networks
+- **Extensible spatial format support**: Handles points, lines, polygons, and complex geometries needed for mapping applications — any spatial data format can be supported
+- **Universal spatial representation**: Works across Earth-centered coordinates, other planetary systems, and virtual worlds using established formats like GeoJSON, decimal coordinates and other location data formats
+- **Rich media attachments**: Connects photos, videos, sensor readings, and documents to spatial data
+- **Extensible verification framework**: Accommodates location proofs created from various location verification systems and techniques
 
-The structure is subject to change — these docs are the most current!
+The Location Protocol is built on the Ethereum Attestation Service (EAS) — it defines a core schemas to create location data that carries clear attribution, timestamp information, attached data, and optional location evidence.
 
-:::
 
-This section of the monorepo currently contains:
 
+This section of the docs includes:
+
+- A [quickstart guide](./quickstart.md) to creating location proofs — note this will be updated soon to use the Astral SDK!
 - Specifications of the core [Ethereum Attestation Service (EAS) schema](./eas-schema.md) for the protocol, and UIDs of deployments on
-  Arbitrum One mainnet, Celo mainnet and Ethereum Sepolia testnet.
-- Details on how to create location proofs using different [location types](./location-types.md)
-- A framework (in development) for building ["recipes"](./strategies-recipes.md) that allow for many different strategies for proving
+  Base, Celo and Arbitrum mainnets, and Ethereum Sepolia testnet.
+- Information on our Location Extensions Library, which provides an interoperability framework for different location data formats: [Location Extensions](./location-types.md)
+- Details on an extensible framework (in development) for building [location proof "recipes"](./strategies-recipes.md) to support different proof-of-location systems
   location to be added (WIP)
-- Information on attaching differet types of [media](./media-extensions.md) to location proofs (WIP)
+- Details on our extensible (notice a pattern here?) framework for attaching different types of [media](./media-extensions.md) to location proofs
 
 ## Contributing
 
