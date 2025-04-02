@@ -1,9 +1,9 @@
 const sidebars = {
   docs: [
     {
-      type: 'category',
+      type: 'doc',
+      id: 'introduction',
       label: 'Astral',
-      items: ['introduction'],
     },
     {
       type:'category',
