@@ -59,6 +59,9 @@ A unified interface to the decentralized geospatial web:
 
 #### Astralscan (`in design`)
 
-
+A web interface for exploring and interacting with location data on Ethereum:
+- **Visual exploration**: Browse and visualize location data on an interactive map
+- **Data verification**: Inspect and validate location claims and their supporting evidence
+- **Rich media support**: View photos, videos, and other media attached to location data
 
 You can join our Telegram to ask the team for support or guidance [here](https://t.me/+UkTOSXnDcDM5ZTBk).

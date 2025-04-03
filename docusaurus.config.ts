@@ -29,98 +29,6 @@ const config: Config = {
     locales: ['en'],
   },
 
-  // Add redirects for restructured content
-  plugins: [
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          // Location Protocol redirects
-          {
-            from: '/docs/location-proof-protocol/introduction',
-            to: '/location-protocol/introduction',
-          },
-          {
-            from: '/docs/location-proof-protocol/quickstart',
-            to: '/location-protocol/quickstart',
-          },
-          {
-            from: '/docs/location-proof-protocol/rationale',
-            to: '/location-protocol/rationale',
-          },
-          {
-            from: '/docs/location-proof-protocol/eas-schema',
-            to: '/location-protocol/eas-schema',
-          },
-          {
-            from: '/docs/location-proof-protocol/location-types',
-            to: '/location-protocol/location-types',
-          },
-          {
-            from: '/docs/location-proof-protocol/strategies-recipes',
-            to: '/location-protocol/strategies-recipes',
-          },
-          {
-            from: '/docs/location-proof-protocol/media-attachments',
-            to: '/location-protocol/media-attachments',
-          },
-          {
-            from: '/docs/location-proof-protocol/media-extensions',
-            to: '/location-protocol/media-extensions',
-          },
-          
-          // Spatial.sol redirects
-          {
-            from: '/docs/verifiable-geocomputation/introduction',
-            to: '/spatial-sol/introduction',
-          },
-          
-          // Astralscan redirects
-          {
-            from: '/docs/logbook/introduction',
-            to: '/astralscan/introduction',
-          },
-          {
-            from: '/docs/logbook/registering-entries',
-            to: '/astralscan/registering-entries',
-          },
-          {
-            from: '/docs/logbook/viewing-entries',
-            to: '/astralscan/viewing-entries',
-          },
-          {
-            from: '/docs/logbook/multi-entry-views',
-            to: '/astralscan/multi-entry-views',
-          },
-          {
-            from: '/docs/logbook/frames',
-            to: '/astralscan/frames',
-          },
-          {
-            from: '/docs/logbook/developers',
-            to: '/astralscan/developers',
-          },
-          {
-            from: '/docs/logbook/contributing',
-            to: '/astralscan/contributing',
-          },
-          
-          // Research redirects
-          {
-            from: '/docs/decentralized-spatial-data/introduction',
-            to: '/research/introduction',
-          },
-          
-          // Root redirects
-          {
-            from: '/',
-            to: '/introduction',
-          },
-        ],
-      },
-    ],
-  ],
-
   presets: [
     [
       'classic',
@@ -150,7 +58,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/astral-social-card.jpg', 
+    image: 'img/astral-social-card.png',
     navbar: {
       title: 'Astral',
       logo: {
