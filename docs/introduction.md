@@ -23,7 +23,7 @@ A structured way of representing geographic information clearly and consistently
 
 ### Spatial.sol `R+D`
 
-[Spatial Sol](./spatial-sol/introduction)
+[Spatial.sol](./spatial-sol/introduction)
 
 A suite of Solidity contracts that bring geospatial functionality to the EVM.
 
