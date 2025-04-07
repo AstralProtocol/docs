@@ -2,7 +2,42 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/docs/introduction",
+      "destination": "/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/docs",
+      "destination": "/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/docs/introduction",
+      "destination": "/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/docs/intro",
+      "destination": "/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/docs/location-proof-protocol/:path*",
+      "destination": "/location-protocol/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/docs/verifiable-geocomputation/:path*",
+      "destination": "/spatial-sol/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/docs/logbook/:path*",
+      "destination": "/astralscan/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/docs/decentralized-spatial-data/:path*",
+      "destination": "/research/:path*",
       "permanent": true
     }
   ]

@@ -16,7 +16,7 @@ Connect your wallet, making sure you are connected to Ethereum Sepolia testnet w
 ## Log Entry Fields
 
 The Logbook provides a UI for you to add relevant data to a log entry. These fields align with the EAS location proof schema described
-[here](../location-proof-protocol/eas-schema.md).
+[here](../location-protocol/eas-schema.md).
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
   <img src={require('./media/register-entry-1.png').default} alt="Register Entry 1" style={{ width: '38%' }} />
@@ -29,7 +29,7 @@ Every log entry needs a location. For v0.1, locations are represented as WGS84 d
 aligned with the [GeoJSON](https://www.google.com/search?q=geojson+standard) convention.
 
 To add a location to a log entry, in the Register Entry page pan + zoom the map to the spot you want to anchor the entry, and tap. On tap, a
-form should appear, and a marker should be added to the map. To adjust the location, simply tap elsewhere on the map — the coordinates in
+form should appear, and a marker should be added to the map. To adjust the location, simply tap elsewhere on the map — the coordinates in
 the form field boxes will update.
 
 ### Date + time

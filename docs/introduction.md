@@ -18,12 +18,12 @@ A structured way of representing geographic information clearly and consistently
 - rich media attachments
 - extensible verification framework
 
-[Location Protocol →](./location-proof-protocol/introduction)
+[Location Protocol](./location-protocol/introduction)
 
 
 ### Spatial.sol `R+D`
 
-[Research Plan →](./verifiable-geocomputation/introduction)
+[Spatial Sol](./spatial-sol/introduction)
 
 A suite of Solidity contracts that bring geospatial functionality to the EVM.
 
