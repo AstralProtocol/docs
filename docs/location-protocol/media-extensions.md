@@ -8,7 +8,22 @@ sidebar_label: Media Extensions
 
 The Media Extensions Library is a core component of Astral's Location Protocol, designed to provide a standardized way to handle various media types that can be attached to location attestations. This Media Extensions Library leverages existing MIME types as identifiers, making it compatible with web standards while ensuring flexibility for extending to specialized media formats.
 
-## Overview
+Users have the capability to attach a diverse range of media types to location attestations. This functionality is powered by the use of MIME types, allowing for the inclusion of various data formats such as photos, videos, audio, URLs, LIDAR scans, point clouds, and more.
+
+## Media Structure
+
+Location attestations have two fields related to media:
+
+- **`mediaType`**: An array of strings, each a unique MIME type designator of the media attached, to ease parsing when attestations are read
+- **`mediaData`**: An array of strings containing media data or identifiers, typically a [CID](https://docs.ipfs.tech/concepts/content-addressing/) for larger media
+
+Elements in each array correspond according to index. This allows any set of media data to be attached to a location attestation, enabling use cases such as geotagged photos and videos, dMRV data for impact/regeneration projects, and more.
+
+:::note
+Data included in the media fields should NOT be required for the location proof strategy. For example, if a strategy used photos of the surrounding area (i.e., of known landmarks), this data should be included in the proof recipe.
+:::
+
+## Media Types Overview
 
 Each media format is defined by a MIME type identifier (included in the `mediaType` attribute). In the `media` attribute, a payload can be found that contains the media data or a reference to it. This approach enables:
 
