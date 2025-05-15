@@ -1,12 +1,12 @@
 ---
 id: location-types
-title: Location Extensions Library Overview
-sidebar_label: Location Extensions
+title: Location Format Extensions Library Overview
+sidebar_label: Location Format Extensions
 ---
 
-# Location Extensions Library Overview
+# Location Format Extensions Library Overview
 
-The Location Extensions Library is a core component of Astral's Location Proof Protocol, designed to provide a flexible, standardized way to work with a diversity of geospatial data. This Location Extensions Library contains detailed information defining a range of different location types supported by the protocol. Code for creating, parsing and validating this geospatial data is implemented in the Astral SDK repo.
+The Location Format Extensions Library is a core component of Astral's Location Protocol, designed to provide a flexible, standardized way to work with a diversity of geospatial data. This Location Format Extensions Library contains detailed information defining a range of different location types supported by the protocol. Code for creating, parsing and validating this geospatial data is implemented in the Astral SDK repo.
 
 ## Overview
 
@@ -79,12 +79,12 @@ Note that for v0.1, the only spatial reference system (`srs`) supported is WGS84
 
 ### Additional Considerations
 
-The Location Proof Protocol is intended to be as interoperable with the rest of the geospatial web as possible. One way to think about location proofs is as a wrapper around a geospatial data artifact that includes digital signatures and evidence about its truthfulness or authenticity. 
+The Location Protocol is intended to be as interoperable with the rest of the geospatial web as possible. One way to think about location proofs is as a wrapper around a geospatial data artifact that includes digital signatures and evidence about its truthfulness or authenticity. 
 
 In that sense, location proofs are spatio-temporal assets. We are considering how to integrate / harmonize the Location Proof Protocol with the STAC spec — weigh in [here](https://github.com/DecentralizedGeo/location-proofs/issues/2).
 
 ## Conclusion
 
-The Location Extensions Library provides a robust and adaptable framework for handling a wide range of geospatial data types. By employing a clean, dot-notation naming convention for our Location Format Identifiers, we ensure that our system is both intuitive and forward-compatible. With clear distinctions between vector and raster data, the library is well-positioned to accommodate emerging data types while maintaining simplicity and consistency.
+The Location Format Extensions Library provides a robust and adaptable framework for handling a wide range of geospatial data types. By employing a clean, dot-notation naming convention for our Location Format Identifiers, we ensure that our system is both intuitive and forward-compatible. With clear distinctions between vector and raster data, the library is well-positioned to accommodate emerging data types while maintaining simplicity and consistency.
 
 For contributions, questions, or further discussions, please refer to our contributing guidelines and join our [community channels](https://t.me/+UkTOSXnDcDM5ZTBk).

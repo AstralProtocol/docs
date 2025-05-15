@@ -1,12 +1,12 @@
 ---
 id: media-extensions
-title: Media Extensions Library Overview
+title: Media Extensions
 sidebar_label: Media Extensions
 ---
 
-# Media Extensions Library Overview
+# Media Extensions
 
-The Media Extensions Library is a core component of Astral's Location Proof Protocol, designed to provide a standardized way to handle various media types that can be attached to location proofs. This Media Extensions Library leverages existing MIME types as identifiers, making it compatible with web standards while ensuring flexibility for extending to specialized media formats.
+The Media Extensions Library is a core component of Astral's Location Protocol, designed to provide a standardized way to handle various media types that can be attached to location attestations. This Media Extensions Library leverages existing MIME types as identifiers, making it compatible with web standards while ensuring flexibility for extending to specialized media formats.
 
 ## Overview
 

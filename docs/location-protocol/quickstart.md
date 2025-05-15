@@ -1,9 +1,10 @@
 # Quickstart
 
-Building with Astral Location Proofs is easy.
+Building with Astral's Location Protocol is easy.
 
-- Create location proofs using the EAS SDK and the Location Proof Protocol schema
-- Resolve location proofs using the EAS SDK
+- Create location attestations using the EAS SDK and the Location Protocol schema
+- Attach location proofs to attestations for verification
+- Resolve location attestations using the EAS SDK
 
 The EAS SDK is documented [here](https://docs.attest.org/docs/welcome) — below we put together the workflow in javascript — copy and adapt as needed. [Here is a current version of EAS.config.](https://github.com/AstralProtocol/logbook/blob/main/packages/nextjs/EAS.config.ts)
 
