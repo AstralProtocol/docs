@@ -10,9 +10,9 @@ Astral's Location Protocol provides a standardized structure for representing sp
 - **Extensible spatial format support**: Handles points, lines, polygons, and complex geometries needed for mapping applications — any spatial data format can be supported
 - **Universal spatial representation**: Works across Earth-centered coordinates, other planetary systems, and virtual worlds using established formats like GeoJSON, decimal coordinates and other location data formats
 - **Rich media attachments**: Connects photos, videos, sensor readings, and documents to spatial data
-- **Extensible verification framework**: Accommodates location proofs created from various location verification systems and techniques
+- **Extensible verification framework**: Accommodates location proofs (verification evidence) that can be attached to location attestations using various verification systems and techniques
 
-The Location Protocol is built on the Ethereum Attestation Service (EAS) — it defines a core schemas to create location data that carries clear attribution, timestamp information, attached data, and optional location evidence.
+The Location Protocol is built on the Ethereum Attestation Service (EAS) — it defines core schemas to create location attestations that carry clear attribution, timestamp information, attached data, and optional location proofs.
 
 
 
@@ -21,10 +21,9 @@ This section of the docs includes:
 - A [quickstart guide](./quickstart.md) to creating location proofs — note this will be updated soon to use the Astral SDK!
 - Specifications of the core [Ethereum Attestation Service (EAS) schema](./eas-schema.md) for the protocol, and UIDs of deployments on
   Base, Celo and Arbitrum mainnets, and Ethereum Sepolia testnet.
-- Information on our Location Extensions Library, which provides an interoperability framework for different location data formats: [Location Extensions](./location-types.md)
-- Details on an extensible framework (in development) for building [location proof "recipes"](./strategies-recipes.md) to support different proof-of-location systems
-  location to be added (WIP)
-- Details on our extensible (notice a pattern here?) framework for attaching different types of [media](./media-extensions.md) to location proofs
+- Information on our Location Format Extensions Library, which provides an interoperability framework for different location data formats: [Location Format Extensions](./location-types.md)
+- Details on our [Location Proof Extensions](./strategies-recipes.md) framework for supporting different proof-of-location systems and verification strategies
+- Details on our [Media Extensions](./media-extensions.md) framework for attaching different types of media to location attestations
 
 ## Contributing
 

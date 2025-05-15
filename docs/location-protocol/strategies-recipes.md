@@ -1,4 +1,10 @@
-# Strategies + Recipes
+---
+id: strategies-recipes
+title: Location Proof Extensions
+sidebar_label: Location Proof Extensions
+---
+
+# Location Proof Extensions
 
 The generalized location proof protocol is designed as it is to accommodate the wide range of strategies for proving location on the
 decentralized web, while also provided a standard way of representing these proofs.

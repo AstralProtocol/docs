@@ -45,7 +45,6 @@ const sidebars = {
         'location-protocol/eas-schema',
         'location-protocol/location-types',
         'location-protocol/strategies-recipes',
-        'location-protocol/media-attachments',
         'location-protocol/media-extensions',
       ],
     },
