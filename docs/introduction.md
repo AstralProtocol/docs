@@ -1,6 +1,6 @@
 # Introduction
 
-The Astral Protocol is a geospatial extension for Ethereum. It adds location data structures and spatial computations to the decentralized web. Our aim is to enable a new kind of open, reliable, and opt-in location-based web. 
+The Astral Protocol is a geospatial extension for the decentralized web. It adds location data structures and spatial computations to Ethereum and IPFS. Our aim is to enable a new kind of open, reliable, and opt-in location-based web. 
 
 Astral doesn't seek to replace existing geospatial technologies. Instead, we ask how we can enhance them with Web3 design principles — openness, durability, and user dignity. Our aim is to bridge established geographic tools and standards with the emerging decentralized web, opening new possibilities for how we create, share, and trust spatial information. 
 
