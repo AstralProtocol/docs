@@ -2,7 +2,7 @@
 id: troubleshooting
 title: Troubleshooting
 sidebar_label: Troubleshooting
-slug: /api/troubleshooting
+slug: /troubleshooting
 ---
 
 # Troubleshooting Guide

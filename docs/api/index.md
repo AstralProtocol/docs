@@ -2,7 +2,7 @@
 id: introduction
 title: Astral Protocol API Documentation
 sidebar_label: Introduction
-slug: /docs/api
+slug: /docs
 ---
 
 # Astral Protocol API Documentation
@@ -58,7 +58,7 @@ This documentation is organized into the following sections:
 - **[Getting Started](./getting-started.md)**: Quick start guide for using the API
 - **[API Reference](./api-reference.md)**: Detailed information about all API endpoints
 - **[Data Model](./data-model.md)**: Overview of the location proof data model
-capabilities
+- **[Spatial Queries](./spatial-queries.md)**: Guide to geographic filtering capabilities
 - **[Authentication](./authentication.md)**: Information about authentication (future)
 - **[Troubleshooting](./troubleshooting.md)**: Solutions to common issues
 
