@@ -13,9 +13,9 @@ Understanding these key concepts will help you work effectively with Astral SDK 
 
 **New to this area? Choose your background:**
 
-- **[Web3 Concepts](./web3)** - For geospatial developers who need blockchain context
-- **[Geospatial Concepts](./geospatial)** - For Web3 developers who need spatial data context  
-- **[Quick Start](./quick-start)** - Jump straight to code examples
+- **[Web3 Concepts](/sdk/core-concepts/web3)** - For geospatial developers who need blockchain context
+- **[Geospatial Concepts](/sdk/core-concepts/geospatial)** - For Web3 developers who need spatial data context  
+- **[Quick Start](/sdk/quick-start)** - Jump straight to code examples
 
 **Learn more about the protocol:** [Location Protocol Specification](https://easierdata.org/updates/2025/2025-05-19-location-protocol-spec)
 
@@ -156,7 +156,7 @@ Support various file types for media attachments (images, video, audio, document
 ### Location Proof Extensions
 Enable attachment of supporting evidence to validate spatial claims (coming soon).
 
-Learn more in the [Extension System Guide](./guides/extensions).
+Learn more in the [Extension System Guide](/sdk/extensions).
 
 ## Verification & Trust
 
@@ -272,15 +272,15 @@ const onchainAttestation = await sdk.createOnchainLocationAttestation(data);
 Now that you understand the core concepts:
 
 **Need more context?**
-- **[Web3 Concepts](./web3)** - Blockchain, signatures, and verification for geospatial developers  
-- **[Geospatial Concepts](./geospatial)** - Spatial data and coordinate systems for Web3 developers
+- **[Web3 Concepts](/sdk/core-concepts/web3)** - Blockchain, signatures, and verification for geospatial developers  
+- **[Geospatial Concepts](/sdk/core-concepts/geospatial)** - Spatial data and coordinate systems for Web3 developers
 
 **Ready to build?**
-1. **[Quick Start](./quick-start)** - 30-second working example
-2. **[Getting Started Guide](./guides/getting-started)** - Complete tutorial with setup
-3. **[Workflow Guides](./guides/getting-started#workflows)** - Deep dives into offchain and onchain patterns
-4. **[Examples Cookbook](./examples/cookbook)** - Real-world usage patterns
+1. **[Quick Start](/sdk/quick-start)** - 30-second working example
+2. **[Getting Started Guide](/sdk/guides/getting-started)** - Complete tutorial with setup
+3. **[Workflow Guides](/sdk/guides/getting-started#workflows)** - Deep dives into offchain and onchain patterns
+4. **[Extensions Guide](/sdk/extensions)** - Extension system overview
 
 **Reference materials:**
 - **[Location Protocol Specification](https://easierdata.org/updates/2025/2025-05-19-location-protocol-spec)** - Full protocol details
-- **[API Reference](./api/reference)** - Complete method documentation
+- **[API Reference](/api-reference)** - Complete method documentation

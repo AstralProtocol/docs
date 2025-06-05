@@ -536,6 +536,6 @@ app.post('/api/attestations', async (req, res) => {
 ## Next Steps
 
 - **[Onchain Workflow Guide](onchain-workflow.md)** - Learn about permanent blockchain attestations
-- **[API Reference](api-reference.md)** - Complete method documentation  
+- **[API Reference](/api-reference)** - Complete method documentation  
 - **[Examples Cookbook](examples.md)** - Real-world usage patterns
-- **[Extension System](extensions.md)** - Custom location formats and media types
+- **[Extension System](/sdk/extensions)** - Custom location formats and media types

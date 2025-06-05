@@ -48,7 +48,7 @@ A TypeScript client library that simplifies working with spatial data in decentr
 
 
 #### Astral API `live beta`
-[API Docs →](./api/getting-started)
+[API Docs →](/getting-started)
 
 A unified interface to the decentralized geospatial web:
 

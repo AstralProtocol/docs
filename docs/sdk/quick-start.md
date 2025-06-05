@@ -102,12 +102,12 @@ for (const location of geoJsonExamples) {
 
 **What's next?**
 
-- **[Core Concepts](./core-concepts/)** - Understand offchain vs onchain workflows
-- **[Getting Started Guide](./guides/getting-started)** - Complete tutorial with setup
-- **[Examples Cookbook](./examples/cookbook)** - Real-world usage patterns
-- **[API Reference](./api/reference)** - Complete method documentation
+- **[Core Concepts](/core-concepts)** - Understand offchain vs onchain workflows
+- **[Getting Started Guide](/sdk/guides/getting-started)** - Complete tutorial with setup
+- **[Extensions Guide](/sdk/extensions)** - Extension system overview
+- **[API Reference](/api-reference)** - Complete method documentation
 
 **Need help?**
-- Check the troubleshooting section in [Getting Started](./guides/getting-started#common-issues--solutions)
-- See working examples in the [Examples Cookbook](./examples/cookbook)
-- Review the [Core Concepts](./core-concepts) for terminology
+- Check the troubleshooting section in [Getting Started](/sdk/guides/getting-started#common-issues--solutions)
+- See working examples in the documentation
+- Review the [Core Concepts](/core-concepts) for terminology

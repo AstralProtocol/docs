@@ -669,8 +669,8 @@ async function createRestrictedAttestation(
 
 ## Next Steps
 
-- **[API Reference](api-reference.md)** - Complete method documentation
+- **[API Reference](/api-reference)** - Complete method documentation
 - **[Offchain Workflow Guide](offchain-workflow.md)** - Learn about gasless attestations  
 - **[Examples Cookbook](examples.md)** - Real-world usage patterns
-- **[Extension System](extensions.md)** - Custom location formats and media types
-- **[Smart Contract Integration](smart-contracts.md)** - Advanced blockchain patterns
+- **[Extension System](/sdk/extensions)** - Custom location formats and media types
+- **[Smart Contract Integration](/api-reference)** - Advanced blockchain patterns
