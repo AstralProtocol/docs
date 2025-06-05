@@ -2,7 +2,7 @@
 title: Astral SDK Documentation
 sidebar_position: 1
 description: Create, store, and verify location attestations on any blockchain
-slug: /
+slug: /sdk/
 ---
 
 # Astral SDK Documentation
