@@ -5,6 +5,7 @@ set -e  # Exit on error
 # List of repositories and their respective target directories
 REPOS=(
     "git@github.com:decentralizedgeo/astral-api.git docs/api"
+    "git@github.com:decentralizedgeo/astral-sdk.git docs/sdk"
     # Add more repositories as needed
 )
 
