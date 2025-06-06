@@ -205,7 +205,7 @@ Now that you've made your first requests to the Astral API, check out these reso
 - [API Reference](./api-reference.md) - Complete reference for all API endpoints
 - [Data Model](./data-model.md) - Information about the data model and structure
 - [Authentication](./authentication.md) - Information about authentication (coming soon)
-- [SDK Documentation](./sdk-documentation.md) - Client SDKs for various languages (coming soon)
+- [SDK Documentation](/sdk/) - Client SDKs for various languages (coming soon)
 
 ## Getting Help
 

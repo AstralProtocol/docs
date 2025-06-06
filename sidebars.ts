@@ -37,7 +37,13 @@ const sidebars = {
             'sdk/guides/development',
           ],
         },
-        'sdk/extensions',
+        {
+          type: 'category',
+          label: 'Extensions',
+          items: [
+            'sdk/extensions',
+          ],
+        },
         {
           type: 'category',
           label: 'Background',
