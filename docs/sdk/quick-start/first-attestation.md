@@ -98,7 +98,7 @@ const featureAttestation = await sdk.createOffchainLocationAttestation({
 
 • **[Offchain Workflow Guide](/sdk/guides/offchain-workflow)** - Deep dive into offchain attestations
 • **[Onchain Workflow Guide](/sdk/guides/onchain-workflow)** - Create permanent blockchain records
-• **[Core Concepts](/sdk/core-concepts/index)** - Understand the fundamentals
+• **[Core Concepts](/core-concepts)** - Understand the fundamentals
 
 ### → Build Something
 
@@ -110,5 +110,5 @@ const featureAttestation = await sdk.createOffchainLocationAttestation({
 ### → Get Help
 
 • Review [common issues](/sdk/guides/getting-started#troubleshooting)
-• Check the [API Reference](/api)
+• Check the [API Reference](/getting-started)
 • See [example projects](/examples)
