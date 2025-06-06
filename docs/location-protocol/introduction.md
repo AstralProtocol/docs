@@ -1,5 +1,6 @@
 # Introduction
 
+> → **Resource:** [Location Protocol: Motivation, Design, and Technical Details (EASIER Data Initiative)](https://easierdata.org/updates/2025/2025-05-19-location-protocol-spec)
 
 Astral's Location Protocol provides a standardized structure for representing spatial information on the decentralized web. It includes:
 

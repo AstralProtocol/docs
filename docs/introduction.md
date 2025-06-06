@@ -1,6 +1,6 @@
 # Introduction
 
-The Astral Protocol is a geospatial extension for the decentralized web. It adds location data structures and spatial computations to Ethereum and IPFS. Our aim is to enable a new kind of open, reliable, and opt-in location-based web. 
+Astral is a geospatial extension for the decentralized web. It adds location data structures and spatial computations to Ethereum and IPFS. Our aim is to enable a new kind of open, reliable, and opt-in location-based web. 
 
 Astral doesn't seek to replace existing geospatial technologies. Instead, we ask how we can enhance them with Web3 design principles — openness, durability, and user dignity. Our aim is to bridge established geographic tools and standards with the emerging decentralized web, opening new possibilities for how we create, share, and trust spatial information. 
 
@@ -20,31 +20,20 @@ A structured way of representing geographic information clearly and consistently
 
 [Location Protocol](./location-protocol/introduction)
 
-
-### Spatial.sol `R+D`
-
-[Spatial.sol](./spatial-sol/introduction)
-
-A suite of Solidity contracts that bring geospatial functionality to the EVM.
-
-- **Spatial operations**: Calculate distances, determine containment, detect intersections between geometries
-- **Efficient indexing**: Organize spatial data for rapid retrieval and analysis
-- **Location-aware logic**: Enable smart contracts with geographic rules like "execute only if within city limits"
-
-
 ### Spatial Attestation Framework
 
 The Astral Spatial Attestation Framework provides a toolkit for developers to build with location data in the Ethereum ecosystem.
 
-#### Astral SDK `in dev`
+#### Astral SDK `beta v0.1.0`
+[SDK Docs →](/sdk)
 [SDK Repo →](https://github.com/DecentralizedGeo/astral-sdk)
 
-A TypeScript client library that simplifies working with spatial data in decentralized applications — built with EAS and ethers.js:
+A TypeScript client library for location-based attestations, now available in beta. Built with EAS and ethers.js:
 
 - **Streamlined workflows**: Create, sign, publish, and retrieve location data with minimal code
 - **Verification tools**: Evaluate location claims against customizable standards of evidence
 - **Media processing**: Consistent handling of diverse media formats attached to location data
-
+- **Comprehensive documentation**: [Read the SDK docs](/sdk)
 
 
 #### Astral API `live beta`
@@ -65,3 +54,16 @@ A web interface for exploring and interacting with location data on Ethereum:
 - **Rich media support**: View photos, videos, and other media attached to location data
 
 You can join our Telegram to ask the team for support or guidance [here](https://t.me/+UkTOSXnDcDM5ZTBk).
+
+
+
+### Spatial.sol `R+D`
+
+[Spatial.sol](./spatial-sol/introduction)
+
+A suite of Solidity contracts that bring geospatial functionality to the EVM.
+
+- **Spatial operations**: Calculate distances, determine containment, detect intersections between geometries
+- **Efficient indexing**: Organize spatial data for rapid retrieval and analysis
+- **Location-aware logic**: Enable smart contracts with geographic rules like "execute only if within city limits"
+

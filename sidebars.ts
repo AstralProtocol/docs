@@ -10,14 +10,21 @@ const sidebars = {
       label: 'SDK',
       items: [
         'sdk/index',
-        'sdk/quick-start',
+        {
+          type: 'category',
+          label: 'Quick Start',
+          items: [
+            'sdk/quick-start/index',
+            'sdk/quick-start/installation',
+            'sdk/quick-start/configuration',
+            'sdk/quick-start/first-attestation',
+          ],
+        },
         {
           type: 'category',
           label: 'Core Concepts',
           items: [
             'sdk/core-concepts/index',
-            'sdk/core-concepts/web3',
-            'sdk/core-concepts/geospatial',
           ],
         },
         {
@@ -27,9 +34,19 @@ const sidebars = {
             'sdk/guides/getting-started',
             'sdk/guides/offchain-workflow',
             'sdk/guides/onchain-workflow',
+            'sdk/guides/development',
           ],
         },
         'sdk/extensions',
+        {
+          type: 'category',
+          label: 'Background',
+          collapsed: true,
+          items: [
+            'sdk/background/web3',
+            'sdk/background/geospatial',
+          ],
+        },
       ]
     },
     {

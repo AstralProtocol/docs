@@ -1,6 +1,7 @@
 ---
-title: Core Concepts
+title: Introduction
 sidebar_position: 2
+sidebar_label: Introduction
 description: Essential concepts and terminology for working with location attestations
 slug: /core-concepts
 ---
@@ -36,7 +37,7 @@ All records are signed to ensure integrity and authorship, and can be shared pub
 
 Astral SDK provides **two distinct ways** to create location attestations, each optimized for different use cases:
 
-### 🔐 Offchain Workflow
+### → Offchain Workflow
 
 **What it is:** Location attestations signed with EIP-712 (like MetaMask message signing)
 
@@ -52,12 +53,12 @@ Build Attestation → Sign with Wallet → Optionally Publish
 ```
 
 **Key characteristics:**
-- ✅ **Free** - No blockchain transactions or gas costs
-- ✅ **Instant** - Created immediately without waiting
-- ✅ **Private** - Only you have it until you choose to publish
-- ✅ **Verifiable** - Cryptographically signed and provable
+• **Free** - No blockchain transactions or gas costs
+• **Instant** - Created immediately without waiting
+• **Private** - Only you have it until you choose to publish
+• **Verifiable** - Cryptographically signed and provable
 
-### ⛓️ Onchain Workflow  
+### → Onchain Workflow  
 
 **What it is:** Location attestations registered as blockchain transactions
 
@@ -73,10 +74,12 @@ Build Attestation → Submit Transaction → Permanent Blockchain Record
 ```
 
 **Key characteristics:**
-- ✅ **Permanent** - Stored on blockchain forever
-- ✅ **Public** - Anyone can verify and query
-- ✅ **Smart contract ready** - Directly accessible by contracts
-- ✅ **Immutable** - Cannot be altered once created
+• **Permanent** - Stored on blockchain forever
+• **Public** - Anyone can verify and query
+• **Smart contract ready** - Directly accessible by contracts
+• **Immutable** - Cannot be altered once created
+
+※ **Privacy Notice**: Onchain transactions publish location data to a public blockchain. Ensure users understand and consent before signing.
 
 :::info Important
 These workflows create **different attestation types** with unique identifiers. An offchain attestation cannot be "converted" to onchain while preserving its identity.
@@ -160,6 +163,8 @@ Learn more in the [Extension System Guide](/sdk/extensions).
 
 ## Verification & Trust
 
+※ **Important**: Current verification checks cryptographic signatures and data integrity only. Location Proof extensions (coming soon) will add evidence of truthfulness such as GPS sensor proofs.
+
 ### Offchain Verification
 Offchain attestations are verified by checking the EIP-712 signature:
 
@@ -182,7 +187,7 @@ if (result.isValid && !result.revoked) {
 
 ## Ethereum Attestation Service (EAS)
 
-Astral SDK is a **reference implementation** of the Location Protocol, built on top of [EAS](https://attest.sh/) (Ethereum Attestation Service). The Location Protocol itself is implementation-agnostic - any system that follows the specification can produce compatible records.
+Astral SDK is an SDK **for working with** the reference implementation of the Location Protocol, built on top of [EAS](https://attest.sh/) (Ethereum Attestation Service). The Location Protocol itself is implementation-agnostic - any system that follows the specification can produce compatible records.
 
 **Why EAS for the reference implementation:**
 - **Standardized format** - Established attestation framework
@@ -283,4 +288,4 @@ Now that you understand the core concepts:
 
 **Reference materials:**
 - **[Location Protocol Specification](https://easierdata.org/updates/2025/2025-05-19-location-protocol-spec)** - Full protocol details
-- **[API Reference](/api-reference)** - Complete method documentation
+- **[API Reference](/sdk/api)** - Complete method documentation
