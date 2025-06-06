@@ -25,6 +25,8 @@ const sidebars = {
           label: 'Core Concepts',
           items: [
             'sdk/core-concepts/index',
+            'sdk/background/web3',
+            'sdk/background/geospatial',
           ],
         },
         {
@@ -42,15 +44,6 @@ const sidebars = {
           label: 'Extensions',
           items: [
             'sdk/extensions',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Background',
-          collapsed: true,
-          items: [
-            'sdk/background/web3',
-            'sdk/background/geospatial',
           ],
         },
       ]
