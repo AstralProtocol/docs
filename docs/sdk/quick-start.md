@@ -1,9 +1,15 @@
 ---
-title: Quick Start
-description: Get started with Astral SDK in under 30 seconds
+title: Quick Start (Legacy)
+sidebar_position: 99
+sidebar_class_name: hidden
+description: This page has been reorganized
 ---
 
-# Quick Start
+# Quick Start → Moved
+
+This content has been reorganized for better navigation.
+
+→ **[View the new Quick Start guide](/sdk/quick-start)**
 
 Get your first location attestation working in under 30 seconds.
 

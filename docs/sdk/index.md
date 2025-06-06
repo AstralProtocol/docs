@@ -8,9 +8,6 @@ slug: /sdk/
 
 # Introduction
 
-> **Astral SDK is now in public beta (v0.1.0)!**
-> [View on GitHub](https://github.com/DecentralizedGeo/astral-sdk)
-
 **Create, store, and verify location attestations on any blockchain.**
 
 Astral SDK is a developer-friendly TypeScript library that makes location-based attestations simple. Built on Ethereum Attestation Service (EAS), it supports both gasless offchain signatures and permanent onchain registration across multiple networks.

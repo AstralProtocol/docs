@@ -1,8 +1,5 @@
 # Astral SDK Documentation
 
-> **Astral SDK is now in public beta (v0.1.0)!**
-> [SDK Repo](https://github.com/DecentralizedGeo/astral-sdk)
-
 This directory contains comprehensive documentation for the Astral SDK.
 
 ## Contents
