@@ -288,4 +288,4 @@ Now that you understand the core concepts:
 
 **Reference materials:**
 - **[Location Protocol Specification](https://easierdata.org/updates/2025/2025-05-19-location-protocol-spec)** - Full protocol details
-- **[API Reference](/sdk/api)** - Complete method documentation
+- **[API Reference](/api)** - Complete method documentation
