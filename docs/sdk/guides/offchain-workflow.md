@@ -34,13 +34,14 @@ Each step is separate, giving you control over when and how attestations are cre
 import { AstralSDK } from '@decentralized-geo/astral-sdk';
 import { ethers } from 'ethers';
 
-// Setup with wallet connection
-const provider = new ethers.BrowserProvider(window.ethereum);
-const signer = await provider.getSigner();
+// Setup with self-contained wallet
+import { Wallet } from 'ethers';
+
+const privateKey = Wallet.createRandom().privateKey;
+const wallet = new Wallet(privateKey);
 
 const sdk = new AstralSDK({
-  signer,
-  defaultChain: 'sepolia'
+  signer: wallet
 });
 
 // Create attestation (builds + signs in one step)
@@ -403,8 +404,11 @@ const serverSDK = new AstralSDK({
 });
 
 // ✅ Use wallet connection for client-side
+const provider = new ethers.BrowserProvider(window.ethereum);
+const signer = await provider.getSigner();
+
 const clientSDK = new AstralSDK({
-  signer: await provider.getSigner()
+  signer: signer
 });
 ```
 
