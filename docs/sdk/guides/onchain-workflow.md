@@ -36,12 +36,11 @@ import { ethers } from 'ethers';
 
 // Setup with provider and funded wallet
 const provider = new ethers.JsonRpcProvider('https://sepolia.infura.io/v3/YOUR_KEY');
-const signer = new ethers.Wallet('YOUR_PRIVATE_KEY', provider);
+const wallet = new ethers.Wallet('YOUR_PRIVATE_KEY', provider);
 
 const sdk = new AstralSDK({
-  provider,
-  signer,
-  defaultChain: 'sepolia'
+  signer: wallet,
+  chainId: 11155111 // Sepolia
 });
 
 // Create onchain attestation (builds + registers in one transaction)
@@ -106,7 +105,7 @@ async function checkWalletReady(provider: ethers.Provider, address: string) {
   return { balance: balanceEth, ready: true };
 }
 
-await checkWalletReady(provider, signer.address);
+await checkWalletReady(provider, wallet.address);
 ```
 
 ## Step-by-Step Process
@@ -204,7 +203,7 @@ const attestation = await sdk.createOnchainLocationAttestation(
     gasLimit: 200000n,
     gasPrice: ethers.parseUnits('20', 'gwei'), // Fast confirmation
     value: 0n, // No ETH value transfer
-    nonce: await provider.getTransactionCount(signer.address)
+    nonce: await provider.getTransactionCount(wallet.address)
   }
 );
 ```
@@ -289,7 +288,7 @@ const LOCATION_SCHEMA = {
 import { EAS } from '@ethereum-attestation-service/eas-sdk';
 
 const eas = new EAS('0xC2679fBD37d54388Ce493F1DB75320D236e1815e');
-eas.connect(signer);
+eas.connect(wallet);
 
 // The SDK handles this internally, but you can access it directly
 const attestationRequest = {
@@ -352,7 +351,7 @@ async function createAttestationWithRetry(
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       // Get current gas price
-      const feeData = await sdk.provider.getFeeData();
+      const feeData = await provider.getFeeData();
       const gasPrice = feeData.gasPrice;
       
       if (!gasPrice) {
@@ -429,7 +428,7 @@ function OnchainAttestationForm() {
   const [txHash, setTxHash] = useState<string>('');
   const [loading, setLoading] = useState(false);
   
-  const createAttestation = async (location: [number, number], memo: string) => {
+  const createAttestation = async (location: { type: string; coordinates: [number, number] }, memo: string) => {
     setLoading(true);
     try {
       const result = await sdk.createOnchainLocationAttestation({

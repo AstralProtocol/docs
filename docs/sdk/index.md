@@ -53,20 +53,36 @@ Astral SDK is a developer-friendly TypeScript library that makes location-based 
 pnpm add @decentralized-geo/astral-sdk  # or npm/yarn
 ```
 
+## Browser Compatibility
+
+The Astral SDK works in both Node.js and browser environments including:
+- Next.js applications
+- React applications  
+- Vanilla JavaScript in browsers
+- Node.js scripts
+
+No special configuration needed for browser environments.
+
 ## 30-Second Example
 
 ```typescript
 import { AstralSDK } from '@decentralized-geo/astral-sdk';
+import { Wallet } from 'ethers';
 
-// Connect to your wallet
+// Create a self-contained wallet for testing
+const privateKey = Wallet.createRandom().privateKey;
+const wallet = new Wallet(privateKey);
+
 const sdk = new AstralSDK({ 
-  provider: window.ethereum,
-  defaultChain: 'sepolia' 
+  signer: wallet
 });
 
 // Create a location attestation
 const attestation = await sdk.createOffchainLocationAttestation({
-  location: [-0.163808, 51.5101], // London coordinates
+  location: {
+    type: 'Point',
+    coordinates: [-0.163808, 51.5101] // London coordinates [longitude, latitude]
+  },
   memo: 'Visited Big Ben today!'
 });
 

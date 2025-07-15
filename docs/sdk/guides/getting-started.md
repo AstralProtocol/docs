@@ -35,6 +35,36 @@ npm install @decentralized-geo/astral-sdk
 yarn add @decentralized-geo/astral-sdk
 ```
 
+## Browser Compatibility
+
+The Astral SDK works in both Node.js and browser environments including:
+- Next.js applications
+- React applications
+- Vanilla JavaScript in browsers
+- Node.js scripts
+
+No special configuration needed for browser environments.
+
+## Wallet Setup
+
+### For Testing (Self-Contained)
+Create a random wallet for testing:
+```typescript
+import { Wallet } from 'ethers';
+const wallet = new Wallet(Wallet.createRandom().privateKey);
+```
+
+### For Production
+Use your existing wallet or connect to MetaMask:
+```typescript
+// Browser wallet
+const provider = new ethers.BrowserProvider(window.ethereum);
+const signer = await provider.getSigner();
+
+// Or import private key (keep secure!)
+const wallet = new Wallet(process.env.PRIVATE_KEY);
+```
+
 ## Core Concepts
 
 ### Two Workflows, Two Use Cases
@@ -74,7 +104,10 @@ const sdk = new AstralSDK({
 ```typescript
 // Define your location (multiple formats supported)
 const locationData = {
-  location: [-0.1276, 51.5074], // London coordinates [longitude, latitude]
+  location: {
+    type: 'Point',
+    coordinates: [-0.1276, 51.5074] // London coordinates [longitude, latitude]
+  },
   memo: 'Visited London Eye today!',
   timestamp: new Date()
 };
@@ -94,20 +127,24 @@ Now we need a wallet to sign the attestation:
 ```typescript
 import { ethers } from 'ethers';
 
-// Connect to user's wallet (in browser)
-const provider = new ethers.BrowserProvider(window.ethereum);
-const signer = await provider.getSigner();
+// Create self-contained wallet for testing
+import { Wallet } from 'ethers';
+
+const privateKey = Wallet.createRandom().privateKey;
+const wallet = new Wallet(privateKey);
 
 // Create SDK with signer
 const signingSDK = new AstralSDK({
-  signer,
-  defaultChain: 'sepolia', // Use Sepolia testnet
+  signer: wallet,
   debug: true
 });
 
 // Create and sign in one step
 const offchainAttestation = await signingSDK.createOffchainLocationAttestation({
-  location: [-0.1276, 51.5074],
+  location: {
+    type: 'Point',
+    coordinates: [-0.1276, 51.5074] // London coordinates [longitude, latitude]
+  },
   memo: 'My first signed location attestation!'
 });
 
@@ -147,17 +184,16 @@ import { ethers } from 'ethers';
 // Setup provider and signer for blockchain interaction
 const provider = new ethers.JsonRpcProvider('https://sepolia.infura.io/v3/YOUR_INFURA_KEY');
 const privateKey = 'YOUR_TEST_PRIVATE_KEY'; // Use a test wallet!
-const signer = new ethers.Wallet(privateKey, provider);
+const wallet = new ethers.Wallet(privateKey, provider);
 
 const sdk = new AstralSDK({
-  provider,
-  signer,
-  defaultChain: 'sepolia',
+  signer: wallet,
+  chainId: 11155111, // Sepolia
   debug: true
 });
 
 // Check balance before proceeding
-const balance = await provider.getBalance(signer.address);
+const balance = await provider.getBalance(wallet.address);
 console.log('Balance:', ethers.formatEther(balance), 'sepETH');
 ```
 
@@ -257,7 +293,10 @@ You can attach images, videos, or other files to location attestations:
 const imageData = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==';
 
 const attestationWithMedia = await sdk.createOffchainLocationAttestation({
-  location: [-0.1276, 51.5074],
+  location: {
+    type: 'Point',
+    coordinates: [-0.1276, 51.5074] // London coordinates [longitude, latitude]
+  },
   memo: 'Photo evidence from London',
   media: [
     {
@@ -385,6 +424,29 @@ const point = {
   type: 'Point', 
   coordinates: [31.2357, 30.0444] // Cairo: lng, lat
 };
+```
+
+## Migrating from v0.1.1
+
+### Breaking Changes
+None. The API remains the same.
+
+### Improvements
+- Browser compatibility fixed
+- Examples now self-contained
+- No MetaMask required for quickstart
+
+### Update Your Code
+If you were using coordinate arrays:
+```typescript
+// Old (not yet supported)
+location: [-122.4194, 37.7749]
+
+// New (use GeoJSON)
+location: {
+  type: 'Point',
+  coordinates: [-122.4194, 37.7749]
+}
 ```
 
 ## Support

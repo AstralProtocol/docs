@@ -10,15 +10,18 @@ Connect the SDK to your Web3 wallet and choose your network.
 
 ## Basic Configuration
 
-The simplest setup uses your browser wallet:
+The simplest setup uses a self-contained wallet:
 
 ```typescript
 import { AstralSDK } from '@decentralized-geo/astral-sdk';
+import { Wallet } from 'ethers';
 
-// Connect to browser wallet (MetaMask, etc.)
+// Create a self-contained wallet for testing
+const privateKey = Wallet.createRandom().privateKey;
+const wallet = new Wallet(privateKey);
+
 const sdk = new AstralSDK({ 
-  provider: window.ethereum,
-  defaultChain: 'sepolia' // testnet for development
+  signer: wallet
 });
 ```
 
@@ -39,10 +42,10 @@ type SupportedChain =
 ```typescript
 const sdk = new AstralSDK({
   // Required
-  provider: window.ethereum,          // Web3 provider
+  signer: wallet,                    // ethers.js signer
   
   // Optional
-  defaultChain: 'sepolia',           // Default: 'sepolia'
+  chainId: 11155111,                 // Chain ID (Sepolia)
   apiUrl: 'https://api.astral.com',  // Custom API endpoint
   debug: true                        // Enable debug logging
 });
@@ -50,12 +53,15 @@ const sdk = new AstralSDK({
 
 ## Provider Options
 
-### Browser Wallet (Recommended)
+### Browser Wallet (For Production)
 
 ```typescript
 // MetaMask or other injected wallets
+const provider = new ethers.BrowserProvider(window.ethereum);
+const signer = await provider.getSigner();
+
 const sdk = new AstralSDK({ 
-  provider: window.ethereum 
+  signer: signer
 });
 ```
 
@@ -64,12 +70,13 @@ const sdk = new AstralSDK({
 ```typescript
 import { ethers } from 'ethers';
 
-// Using ethers.js provider
+// Using ethers.js provider for onchain operations
 const provider = new ethers.JsonRpcProvider('https://rpc.sepolia.org');
-const signer = new ethers.Wallet(privateKey, provider);
+const wallet = new ethers.Wallet(privateKey, provider);
 
 const sdk = new AstralSDK({ 
-  provider: signer 
+  signer: wallet,
+  chainId: 11155111 // Sepolia
 });
 ```
 

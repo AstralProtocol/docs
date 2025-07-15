@@ -203,7 +203,10 @@ Location attestations can include media files as supporting evidence:
 
 ```typescript
 const attestation = await sdk.createOffchainLocationAttestation({
-  location: [-0.1276, 51.5074],
+  location: {
+    type: 'Point',
+    coordinates: [-0.1276, 51.5074] // London coordinates [longitude, latitude]
+  },
   memo: 'Photo evidence from London Eye',
   media: [
     {
