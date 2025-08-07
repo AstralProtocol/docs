@@ -291,4 +291,4 @@ Now that you understand the core concepts:
 
 **Reference materials:**
 - **[Location Protocol Specification](https://easierdata.org/updates/2025/2025-05-19-location-protocol-spec)** - Full protocol details
-- **[API Reference](/getting-started)** - Complete method documentation
+- **[API Reference](/api/getting-started)** - Complete method documentation

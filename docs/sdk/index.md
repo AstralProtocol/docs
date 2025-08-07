@@ -24,7 +24,7 @@ Astral SDK is a developer-friendly TypeScript library that makes location-based 
 - **[Onchain Workflow](/sdk/guides/onchain-workflow)** - Permanent blockchain records
 
 ### § Reference
-- **[API Reference](/getting-started)** - Complete method documentation
+- **[API Reference](/api/getting-started)** - Complete method documentation
 - **[Extensions Guide](/sdk/extensions)** - Extension system overview
 
 ## Why Astral SDK?
@@ -94,5 +94,5 @@ console.log('Attestation UID:', attestation.uid);
 
 1. **New to location attestations?** Start with [Core Concepts](/core-concepts)
 2. **Want to build something?** Try the [Getting Started Guide](/sdk/guides/getting-started)
-3. **Need reference docs?** See the [API Reference](/getting-started)
+3. **Need reference docs?** See the [API Reference](/api/getting-started)
 4. **Looking for extensions?** Check the [Extensions Guide](/sdk/extensions)
