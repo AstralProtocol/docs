@@ -2,7 +2,7 @@
 id: introduction
 title: Astral Protocol API Documentation
 sidebar_label: Introduction
-slug: /docs
+slug: /api
 ---
 
 # Astral Protocol API Documentation
