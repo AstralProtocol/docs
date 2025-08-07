@@ -2,7 +2,7 @@
 id: authentication
 title: Authentication
 sidebar_label: Authentication
-slug: /authentication
+slug: /api/authentication
 ---
 
 # Authentication

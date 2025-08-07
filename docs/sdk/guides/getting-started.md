@@ -426,6 +426,20 @@ const point = {
 };
 ```
 
+## Migrating from v0.1.2
+
+### Breaking Changes
+None. The API remains the same.
+
+### Improvements
+- Enhanced verification capabilities
+- Better error handling and messaging
+- Performance optimizations
+- Additional network support
+
+### Update Your Code
+No code changes required from v0.1.2.
+
 ## Migrating from v0.1.1
 
 ### Breaking Changes

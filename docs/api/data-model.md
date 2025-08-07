@@ -2,7 +2,7 @@
 id: data-model
 title: Data Model
 sidebar_label: Data Model
-slug: /data-model
+slug: /api/data-model
 ---
 
 # Data Model

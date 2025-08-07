@@ -24,7 +24,7 @@ A structured way of representing geographic information clearly and consistently
 
 The Astral Spatial Attestation Framework provides a toolkit for developers to build with location data in the Ethereum ecosystem.
 
-#### Astral SDK `beta v0.1.0`
+#### Astral SDK `beta v0.1.3`
 [SDK Docs →](/sdk)<br/>
 [SDK Repo →](https://github.com/DecentralizedGeo/astral-sdk)
 
@@ -37,7 +37,7 @@ A TypeScript client library for location-based attestations, now available in be
 
 
 #### Astral API `live beta`
-[API Docs →](/getting-started)
+[API Docs →](/api/getting-started)
 
 A unified interface to the decentralized geospatial web:
 

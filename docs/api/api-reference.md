@@ -2,7 +2,7 @@
 id: api-reference
 title: Astral API Reference
 sidebar_label: API Reference
-slug: /api-reference
+slug: /api/api-reference
 ---
 
 # Astral API Reference

@@ -116,5 +116,5 @@ const featureAttestation = await sdk.createOffchainLocationAttestation({
 ### → Get Help
 
 • Review [common issues](/sdk/guides/getting-started#troubleshooting)
-• Check the [API Reference](/getting-started)
+• Check the [API Reference](/api/getting-started)
 • See [example projects](/examples)

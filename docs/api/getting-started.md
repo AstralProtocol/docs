@@ -2,7 +2,7 @@
 id: getting-started
 title: Getting Started
 sidebar_label: Getting Started
-slug: /getting-started
+slug: /api/getting-started
 ---
 
 # Getting Started with Astral API
