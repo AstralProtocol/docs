@@ -35,9 +35,9 @@ The Astral API is a RESTful API that provides endpoints for:
 
 To start using the Astral API:
 
-1. Check out the [Getting Started Guide](./getting-started.md) for a quick introduction
-2. Read the [API Reference](./api-reference.md) for detailed endpoint information
-3. Explore the [Data Model](./data-model.md) to understand location proof structure
+1. Check out the [Getting Started Guide](/api/getting-started) for a quick introduction
+2. Read the [API Reference](/api/api-reference) for detailed endpoint information
+3. Explore the [Data Model](/api/data-model) to understand location proof structure
 
 ## Example Use Cases
 
@@ -55,18 +55,18 @@ The Astral API enables numerous applications, including:
 This documentation is organized into the following sections:
 
 - **Introduction**: Overview of the Astral Protocol API (this page)
-- **[Getting Started](./getting-started.md)**: Quick start guide for using the API
-- **[API Reference](./api-reference.md)**: Detailed information about all API endpoints
-- **[Data Model](./data-model.md)**: Overview of the location proof data model
-- **[Spatial Queries](./spatial-queries.md)**: Guide to geographic filtering capabilities
-- **[Authentication](./authentication.md)**: Information about authentication (future)
-- **[Troubleshooting](./troubleshooting.md)**: Solutions to common issues
+- **[Getting Started](/api/getting-started)**: Quick start guide for using the API
+- **[API Reference](/api/api-reference)**: Detailed information about all API endpoints
+- **[Data Model](/api/data-model)**: Overview of the location proof data model
+- **[Spatial Queries](/api/spatial-queries)**: Guide to geographic filtering capabilities
+- **[Authentication](/api/authentication)**: Information about authentication (future)
+- **[Troubleshooting](/api/troubleshooting)**: Solutions to common issues
 
 ## Support and Community
 
 If you have questions or need help:
 
-- Check the [Troubleshooting Guide](./troubleshooting.md) for solutions to common problems
+- Check the [Troubleshooting Guide](/api/troubleshooting) for solutions to common problems
 - Create an issue in the [GitHub repository](https://github.com/DecentralizedGeo/astral-api)
 - Join our community channels for discussion and support
 
