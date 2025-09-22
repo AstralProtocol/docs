@@ -111,11 +111,11 @@ At Astral, in collaboration with the University of Maryland and OGC, we are:
 
 ## Next Steps in this Section
 
-- [Strategies](../strategies/index.md): categories of how location evidence is produced.
-- [Signals](../signals/index.md): raw observables we can build from.
-- [Integrity](../integrity/index.md): cross-cutting assurances.
-- [Plugins](../plugins/index.md): modules that generate verifiable stamps.
-- [Recipes](../recipes/index.md): compositions of multiple plugins into full proofs.
+- [Strategies](./strategies/index.md): categories of how location evidence is produced.
+- [Signals](./signals/index.md): raw observables we can build from.
+- [Integrity](./integrity/index.md): cross-cutting assurances.
+- [Plugins](./plugins/index.md): modules that generate verifiable stamps.
+- [Recipes](./recipes/index.md): compositions of multiple plugins into full proofs.
 
 ---
 
