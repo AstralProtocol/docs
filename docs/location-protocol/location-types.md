@@ -10,7 +10,40 @@ The Location Format Extensions Library is a core component of Astral's Location 
 
 ## Overview
 
-Each location format is defined by a unique identifier (the Location Format Identifier — a `string` value included in the `locationType` attribute). In the `location` attribute, a payload can be found that contains the geospatial data formatted according to that identifier. This approach enables:
+The Location Protocol uses two complementary attributes to represent geospatial data:
+
+- **`locationType`**: Contains the Location Format Identifier — a standardized string that defines how the location data is structured (e.g., `coordinate-decimal+lon-lat`, `geojson-point`, `wkt-polygon`)
+- **`location`**: Contains the actual geospatial data payload, formatted according to the identifier specified in `locationType`
+
+### How It Works
+
+The `locationType` attribute **is** the Location Format Identifier. It's not a container that includes the identifier — it is the identifier itself. The `location` attribute then contains the corresponding geospatial data formatted according to that identifier.
+
+**Example 1: Coordinate format**
+```json
+{
+  "locationType": "coordinate-decimal+lon-lat",
+  "location": "-73.935242, 40.730610"
+}
+```
+
+**Example 2: GeoJSON format**
+```json
+{
+  "locationType": "geojson-point",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-73.935242,40.730610]}"
+}
+```
+
+**Example 3: WKT format**
+```json
+{
+  "locationType": "wkt-polygon",
+  "location": "POLYGON((-122.4 37.8, -122.4 37.7, -122.3 37.7, -122.3 37.8, -122.4 37.8))"
+}
+```
+
+This two-attribute approach enables:
 
 - **Extensibility:** New location formats can be added easily without impacting existing functionality.
 - **Interoperability:** A standardized interface allows different systems and proof strategies to work together seamlessly.
@@ -21,7 +54,7 @@ In v0.1 of the Astral SDK, all location formats are eventually converted to GeoJ
 ## Location Format Identifier Naming Convention
 
 The **Location Format Identifier** is a string that uniquely defines how the location data is structured. It is designed to be:
- 
+
 - **All lower case**
 - **Dot-separated**, with each segment conveying a specific piece of information
 - **Kebab-case** for multi-word segments
@@ -79,7 +112,7 @@ Note that for v0.1, the only spatial reference system (`srs`) supported is WGS84
 
 ### Additional Considerations
 
-The Location Protocol is intended to be as interoperable with the rest of the geospatial web as possible. One way to think about location proofs is as a wrapper around a geospatial data artifact that includes digital signatures and evidence about its truthfulness or authenticity. 
+The Location Protocol is intended to be as interoperable with the rest of the geospatial web as possible. One way to think about location proofs is as a wrapper around a geospatial data artifact that includes digital signatures and evidence about its truthfulness or authenticity.
 
 In that sense, location proofs are spatio-temporal assets. We are considering how to integrate / harmonize the Location Proof Protocol with the STAC spec — weigh in [here](https://github.com/DecentralizedGeo/location-proofs/issues/2).
 
