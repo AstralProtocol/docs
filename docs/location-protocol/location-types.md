@@ -138,7 +138,7 @@ Note that for v0.1, the only spatial reference system (`srs`) supported is WGS84
 
 The Location Protocol is intended to be as interoperable with the rest of the geospatial web as possible. Location attestations are consistently-formatted verifiable location records that wrap geospatial data artifacts with digital signatures and metadata. They can optionally carry location proofs — cryptographic or cryptoeconomic evidence that corroborates the claims being made by the attestation.
 
-In that sense, location attestations are spatio-temporal assets. We are considering how to integrate / harmonize the Location Attestation Protocol with the STAC spec — weigh in [here](https://github.com/DecentralizedGeo/location-proofs/issues/2).
+In that sense, location attestations are spatio-temporal assets. We are considering how to integrate / harmonize the Location Protocol with the STAC spec — weigh in [here](https://github.com/DecentralizedGeo/location-proofs/issues/2).
 
 ## Conclusion
 
