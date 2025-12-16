@@ -13,13 +13,29 @@ The Location Format Extensions Library is a core component of Astral's Location 
 The Location Protocol uses two complementary attributes to represent geospatial data:
 
 - **`locationType`**: Contains the Location Format Identifier — a standardized string that defines how the location data is structured (e.g., `coordinate-decimal+lon-lat`, `geojson-point`, `wkt-polygon`)
-- **`location`**: Contains the actual geospatial data payload, formatted according to the identifier specified in `locationType`
+- **`location`**: Contains either the actual geospatial data or a pointer to it (such as a CID, DID, or URL), formatted according to the identifier specified in `locationType`
 
 ### How It Works
 
-The `locationType` attribute **is** the Location Format Identifier. It's not a container that includes the identifier — it is the identifier itself. The `location` attribute then contains the corresponding geospatial data formatted according to that identifier.
+The `locationType` attribute **is** the Location Format Identifier. It's not a container that includes the identifier — it is the identifier itself. The `location` attribute then contains the corresponding geospatial data (or a pointer to it) formatted according to that identifier.
 
-**Example 1: Coordinate format**
+The `location` payload can be:
+- **Direct data**: The actual geospatial data embedded in the attestation (e.g., coordinate pairs, GeoJSON strings, WKT strings)
+- **Pointer/reference**: A link to external data storage (e.g., IPFS CID, DID, or URL pointing to larger files)
+
+While we recommend using verifiable storage systems like IPFS for data integrity, regular URLs are also supported.
+
+### Why Include locationType?
+
+The `locationType` attribute serves several important purposes:
+
+1. **Efficiency**: Location attestations often point to large files. Knowing the data type upfront allows systems to make informed decisions about whether to download and parse a file, rather than fetching it blindly just to discover its geometry types.
+
+2. **Clarity**: It resolves ambiguities that are common in geospatial data, such as coordinate ordering (lon-lat vs lat-lon), which can otherwise lead to errors where locations appear in the wrong place.
+
+3. **Interoperability**: It provides a standardized interface that allows different systems and proof strategies to work together seamlessly without needing to inspect the data payload first.
+
+**Example 1: Direct data - Coordinate format**
 ```json
 {
   "locationType": "coordinate-decimal+lon-lat",
@@ -27,7 +43,7 @@ The `locationType` attribute **is** the Location Format Identifier. It's not a c
 }
 ```
 
-**Example 2: GeoJSON format**
+**Example 2: Direct data - GeoJSON format**
 ```json
 {
   "locationType": "geojson-point",
@@ -35,11 +51,19 @@ The `locationType` attribute **is** the Location Format Identifier. It's not a c
 }
 ```
 
-**Example 3: WKT format**
+**Example 3: Direct data - WKT format**
 ```json
 {
   "locationType": "wkt-polygon",
   "location": "POLYGON((-122.4 37.8, -122.4 37.7, -122.3 37.7, -122.3 37.8, -122.4 37.8))"
+}
+```
+
+**Example 4: Pointer - GeoTIFF via IPFS CID**
+```json
+{
+  "locationType": "raster-geotiff",
+  "location": "bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi"
 }
 ```
 
